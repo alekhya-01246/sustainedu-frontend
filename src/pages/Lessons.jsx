@@ -9,7 +9,7 @@ export default function Lessons() {
 
   const fetchLessons = () => {
     setLoading(true);
-    fetch("http://localhost:8080/api/lessons")
+    fetch("https://sustainedu-backend-production.up.railway.app/api/lessons")
       .then((res) => res.json())
       .then((data) => setLessons(data))
       .catch(console.error)

@@ -11,8 +11,8 @@ export default function Dashboard() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:8080/api/lessons").then((res) => res.json()),
-      fetch("http://localhost:8080/api/projects").then((res) => res.json()),
+      fetch("https://sustainedu-backend-production.up.railway.app/api/lessons").then((res) => res.json()),
+      fetch("https://sustainedu-backend-production.up.railway.app/api/projects").then((res) => res.json()),
     ]).then(([lessons, projects]) => {
       setStats({
         lessons: lessons.length,
